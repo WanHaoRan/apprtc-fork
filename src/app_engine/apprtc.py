@@ -234,9 +234,9 @@ def get_room_parameters(request, room_id, client_id, is_initiator):
     # HTML template is UTF-8, make sure the string is UTF-8 as well.
     warning_messages.append(message.encode('utf-8'))
   if hd == 'true':
-    video = 'mandatory:minWidth=1280,mandatory:minHeight=720'
+    video = 'mandatory:minWidth=1920,mandatory:minHeight=1080'
   elif not hd and not video and get_hd_default(user_agent) == 'true':
-    video = 'optional:minWidth=1280,optional:minHeight=720'
+    video = 'optional:minWidth=1920,optional:minHeight=1080'
 
   if request.get('minre') or request.get('maxre'):
     message = ('The "minre" and "maxre" parameters are no longer ' +
