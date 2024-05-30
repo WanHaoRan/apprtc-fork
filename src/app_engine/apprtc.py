@@ -238,7 +238,7 @@ def get_room_parameters(request, room_id, client_id, is_initiator):
   elif not hd and not video and get_hd_default(user_agent) == 'true':
     video = 'optional:minWidth=1920,optional:minHeight=1080'
 
-  video = 'mandatory:minWidth=1920,mandatory:minHeight=1080'
+  video = 'mandatory:minWidth=1280,mandatory:minHeight=720'
   if request.get('minre') or request.get('maxre'):
     message = ('The "minre" and "maxre" parameters are no longer ' +
         'supported. Use "video" instead.')
